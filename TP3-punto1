@@ -1,0 +1,17 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+int main(){
+vector<string> paises(5);
+for(int i=0;i<5;i++)cin>>paises[i];
+for(int i=0;i<4;i++)
+for(int j=i+1;j<5;j++)
+if(paises[i]>paises[j]){
+string aux=paises[i];
+paises[i]=paises[j];
+paises[j]=aux;
+}
+for(int i=0;i<5;i++)cout<<paises[i]<<endl;
+return 0;
+}
